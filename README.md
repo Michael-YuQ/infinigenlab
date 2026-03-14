@@ -25,7 +25,13 @@ assumes you have a separate Infinigen checkout and points scripts at it with a
 
 1. Install Infinigen separately, for example at `~/infinigen`
 2. Create and activate the `infinigen` conda environment
-3. Run the batch helper:
+3. Run the one-click launcher:
+
+```bash
+bash "$HOME/infinigenlab/scripts/launch_10_singleroom_coarse_cpu.sh"
+```
+
+Or run the Python batch helper directly:
 
 ```bash
 cd "$HOME/infinigen"
@@ -37,6 +43,12 @@ python "$HOME/infinigen-lab/scripts/run_indoors_coarse_batch.py" \
   --output-root "$HOME/infinigen_outputs/singleroom_coarse_x10_metrics" \
   --num-scenes 10 \
   --parallel 2
+```
+
+Check the results:
+
+```bash
+bash "$HOME/infinigenlab/scripts/check_batch_results.sh"
 ```
 
 ## Outputs from the batch helper
